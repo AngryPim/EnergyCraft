@@ -1,0 +1,29 @@
+Theme: Medieval
+
+New bed: King Size Bed
+Detail blocks (More things like stairs and slabs)
+Machine (Saw) to make everything smaller
+More Glass (Stained glass)
+Cerpets
+Particle Blocks
+Old Paintings
+Statues (Knight Statues)
+More Rails
+Flags
+Furniture: Like chairs and tables
+WoodenHorse (Can sit on it and one that can ride with a motor)
+Candelers
+Weapons/Shield on wall
+Cabinet
+More floors and walls
+Armor Like Crowns
+Kitchen stuff
+Wood statues
+More path textures
+Roof Blocks (Stairs maar dan met nog een stair trapje derin)
+Rope
+Hay With Rope and Hay without rope
+Chain to hang your candelers
+Particle Machine To give the world some more particles
+FilterMachine To filter all your stuff!
+Give Gravel a use!
