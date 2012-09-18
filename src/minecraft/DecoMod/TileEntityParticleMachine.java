@@ -15,11 +15,11 @@ import net.minecraftforge.common.ISidedInventory;
 
 public class TileEntityParticleMachine extends TileEntity //implements IInventory, ISidedInventory
 {
-/*    private String mobID = "";
-    private String prevMobID = "";
-    public double yaw;
-    public double yaw2 = 0.0D;
-    private float rotation;*/
+//  private String mobID = "";
+   // private String prevMobID = "";
+  //  public double yaw;
+   // public double yaw2 = 0.0D;
+    private float rotation;
     
 	public TileEntityParticleMachine()
 	{
@@ -458,10 +458,7 @@ public class TileEntityParticleMachine extends TileEntity //implements IInventor
         this.onInventoryChanged();
     }
     
-    public float getRotation()
-    {
-    	return rotation;
-    }
+
 
 	@Override
 	public int getStartInventorySide(ForgeDirection side) {
@@ -493,4 +490,8 @@ public class TileEntityParticleMachine extends TileEntity //implements IInventor
 		// TODO Auto-generated method stub
 		
 	}*/
+    public float getRotation()
+    {
+    	return rotation;
+    }
 }

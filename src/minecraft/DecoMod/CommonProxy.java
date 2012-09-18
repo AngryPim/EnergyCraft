@@ -20,7 +20,6 @@ public class CommonProxy implements IGuiHandler
 	
 	public static void registerRenderInformation()
 	{
-		modelID = ;
 		
 		GameRegistry.registerTileEntity(TileEntityParticleMachine.class, "particleMachine");
 	}
