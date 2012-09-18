@@ -1,5 +1,6 @@
 package DecoMod;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PreInit;
@@ -24,6 +25,7 @@ public class BaseDecoMod
 	@Init
 	public void LoadFrom(FMLInitializationEvent event)
 	{
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityParticleMachine.class, new TileEntityParticleMachineRenderer());
 		proxy.registerRenderInformation();
 		ClientProxy.registerRenderInformation();
 	}

@@ -13,19 +13,19 @@ import net.minecraft.src.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.ISidedInventory;
 
-public class TileEntityParticleMachine extends TileEntity implements IInventory, ISidedInventory
+public class TileEntityParticleMachine extends TileEntity //implements IInventory, ISidedInventory
 {
-    private String mobID = "";
+/*    private String mobID = "";
     private String prevMobID = "";
     public double yaw;
     public double yaw2 = 0.0D;
-    private float rotation;
+    private float rotation;*/
     
 	public TileEntityParticleMachine()
 	{
 		
 	}
-    private ItemStack[] animatorItemStacks = new ItemStack[3];
+    /*private ItemStack[] animatorItemStacks = new ItemStack[3];
     
     public int aquaMiddleGemBurnTime = 0;
     public int currentAquaMiddleGemBurnTime = 0;
@@ -78,10 +78,10 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
         return this.animatorItemStacks[par1];
     }
 
-    /**
+    *//**
      * Decrease the size of the stack in slot (first int arg) by the amount of the second int arg. Returns the new
      * stack.
-     */
+     *//*
     public ItemStack decrStackSize(int par1, int par2)
     {
         if (this.animatorItemStacks[par1] != null)
@@ -112,10 +112,10 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
         }
     }
 
-    /**
+    *//**
      * When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem -
      * like when you close a workbench GUI.
-     */
+     *//*
     public ItemStack getStackInSlotOnClosing(int par1)
     {
         if (this.animatorItemStacks[par1] != null)
@@ -130,9 +130,9 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
         }
     }
 
-    /**
+    *//**
      * Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
-     */
+     *//*
     public void setInventorySlotContents(int par1, ItemStack par2ItemStack)
     {
         this.animatorItemStacks[par1] = par2ItemStack;
@@ -143,17 +143,17 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
         }
     }
 
-    /**
+    *//**
      * Returns the name of the inventory.
-     */
+     *//*
     public String getInvName()
     {
         return "Animator";
     }
 
-    /**
+    *//**
      * Reads a tile entity from NBT.
-     */
+     *//*
     public void readFromNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.readFromNBT(par1NBTTagCompound);
@@ -178,9 +178,9 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
         this.currentSulfurBurnTime = par1NBTTagCompound.getShort("currentSulfurBurnTime");
     }
 
-    /**
+    *//**
      * Writes a tile entity to NBT.
-     */
+     *//*
     public void writeToNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.writeToNBT(par1NBTTagCompound);
@@ -204,19 +204,19 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
         par1NBTTagCompound.setTag("Items", var2);
     }
 
-    /**
+    *//**
      * Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't
      * this more of a set than a get?*
-     */
+     *//*
     public int getInventoryStackLimit()
     {
         return 64;
     }
 
-    /**
+    *//**
      * Returns an integer between 0 and the passed value representing how much burn time is left on the current fuel
      * item, where 0 means that the item is exhausted and the passed value means that the item is fresh
-     */
+     *//*
     public int getAquaMiddleGemBurnTimeRemainingScaled(int par1)
     {
         if (this.currentAquaMiddleGemBurnTime == 0)
@@ -242,10 +242,10 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
     
    
 
-    /**
+    *//**
      * Returns true if the animator can smelt an item, i.e. has a source item, destination stack isn't full, etc.
-     */
-    /*private boolean canSmelt(int par1)
+     *//*
+    private boolean canSmelt(int par1)
     {
     	try
     	{
@@ -263,9 +263,9 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
     		
     	}
 		return false;
-    } */
+    } 
 
-   /* public static int getItemBurnTime(ItemStack par1ItemStack)
+    public static int getItemBurnTime(ItemStack par1ItemStack)
     {
         if (par1ItemStack == null)
         {
@@ -286,20 +286,20 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
             return FMLCommonHandler.instance().fuelLookup(var1, par1ItemStack.getItemDamageForDisplay());
             return 0;
         }
-    }*/
+    }
 
-    /**
+    *//**
      * Return true if item is a fuel source (getItemBurnTime() > 0).
-     */
-    /*public static boolean isItemFuel(ItemStack par0ItemStack)
+     *//*
+    public static boolean isItemFuel(ItemStack par0ItemStack)
     {
         return getItemBurnTime(par0ItemStack) > 0;
-    }*/
+    }
 
-    /**
+    *//**
      * Do not make give this method the name canInteractWith because it clashes with Container
-     */
-   /* public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
+     *//*
+    public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
     {
         return this.worldObj.getBlockTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : par1EntityPlayer.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
     }
@@ -311,9 +311,9 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
     public String getMobID()
     {
         return mobID;
-    }*/
+    }
     
-   /* public void updateEntity()
+    public void updateEntity()
     {
         super.updateEntity();
         
@@ -411,9 +411,9 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
             {
                 var21 = true;
             }
-        }*/
+        }
 
-       /* BlockAnimator.updateAnimatorBlockState(this.isBurning(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+        BlockAnimator.updateAnimatorBlockState(this.isBurning(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);
         
         if (var21)
         {
@@ -456,7 +456,7 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
         }
         
         this.onInventoryChanged();
-    }*/
+    }
     
     public float getRotation()
     {
@@ -492,5 +492,5 @@ public class TileEntityParticleMachine extends TileEntity implements IInventory,
 	public void closeChest() {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
 }
